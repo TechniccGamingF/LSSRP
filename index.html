@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
     <title>LSSRP</title>
+    <script src="js/normal.js"></script>
   </head>
   <body>
-    <h1>Dealer</h1>
+    <div id="content">
+      <h1>Dealer</h1>
+      <input type="button" class="button" id="selectAll" value="Alle" onclick="selectAll()">
+      <input type="button" class="button" value="Anwesend" onclick="onlyAnwesend()">
+      <input type="button" class="button" value="Nicht anwesend" onclick="onlyAbwesend()">
+      <br>
+    </div>
   </body>
 </html>
-
-<script>
-  document.addEventListener("DOMContentLoaded", async () => {
-    const response = await fetch('data/data.json');
-    const data = await response.json();
-    console.log(data);
-  });
-</script>
+<script>document.getElementById("selectAll").click();</script>

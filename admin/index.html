@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <script src="../js/admin.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>Admin Panel</h1>
+    <button class="button" onclick="loadData()">Load Data</button>
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>PLZ</th>
+                <th>Ort</th>
+                <th>Menge</th>
+                <th>Zeiten</th>
+                <th>Droge</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <button class="button" onclick="showForm()">Add New Entry</button>
+    <div id="form-container" style="display: none;">
+        <h2 id="form-title">Add/Edit Entry</h2>
+        <form id="data-form">
+            <label for="plz">PLZ:</label>
+            <input type="text" id="plz" name="plz"><br>
+            <label for="ort">Ort:</label>
+            <input type="text" id="ort" name="ort"><br>
+            <label for="menge">Menge:</label>
+            <input type="text" id="menge" name="menge"><br>
+            <label for="zeiten">Zeiten:</label>
+            <input type="text" id="zeiten" name="zeiten"><br>
+            <label for="droge">Droge:</label>
+            <input type="text" id="droge" name="droge"><br>
+            <input type="hidden" id="row-index">
+            <button type="button" class="button" onclick="saveData()">Save</button>
+            <button type="button" class="button" onclick="hideForm()">Cancel</button>
+        </form>
+    </div>
+</body>
+</html>

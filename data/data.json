@@ -1,32 +1,23 @@
 [
     {
-        "PLZ": "1",
-        "Ort": "",
-        "Menge": "1",
-        "Artikel":[
-            {
-                "Droge": "1"
-            }
-        ]
+        "PLZ": "3013",
+        "Ort": "Paleto",
+        "Menge": "100",
+        "Zeiten": "10:00 - 22:00",
+        "Droge": "Weed, Meth"
     },
     {
-        "PLZ": "2",
-        "Ort": "",
-        "Menge": "1",
-        "Artikel":[
-            {
-                "Droge": "1"
-            }
-        ]
+        "PLZ": "1007",
+        "Ort": "awd",
+        "Menge": "10",
+        "Zeiten": "22:00 - 5:00",
+        "Droge": "Weed, Meth"
     },
     {
-        "PLZ": "3",
-        "Ort": "",
-        "Menge": "1",
-        "Artikel":[
-            {
-                "Droge": "1"
-            }
-        ]
+        "PLZ": "118",
+        "Ort": "Davis",
+        "Menge": "10",
+        "Zeiten": "",
+        "Droge": "Weed"
     }
 ]
