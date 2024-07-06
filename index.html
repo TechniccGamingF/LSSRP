@@ -11,24 +11,9 @@
 </html>
 
 <script>
-  $(document).ready(function () {
-      const file = event.target.files[0];
-      if (!file) return;
-    
-      const reader = new FileReader();
-      reader.onload = function (event) {
-        const jsonDaten = JSON.parse("data/data.json");
-        console.log(jsonDaten);
-      };
-      reader.readAsText(file);
-    
-      document.getElementById("mainScreen").classList.toggle("visible"); // Hinzufügen der CSS-Klasse 'hidden'
+  document.addEventListener("DOMContentLoaded", async () => {
+    const response = await fetch('data/data.json');
+    const data = await response.json();
+    console.log(data);
   });
-  function jsonToHTML(jsonDaten) {
-    let html = "<table>";
-    html += "<tr>";
-    for (const key in jsonDaten[0]) {
-      html += `<th>${key}</th>`;
-    }
-  }
 </script>
