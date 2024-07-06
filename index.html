@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LSSRP</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <h1>Dealer</h1>
+  </body>
 </html>
+
+<script>
+  function loadMainScreen() {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function (event) {
+      const jsonDaten = JSON.parse("data/data.json");
+      console.log(jsonDaten);
+    };
+    reader.readAsText(file);
+
+    document.getElementById("mainScreen").classList.toggle("visible"); // Hinzufügen der CSS-Klasse 'hidden'
+  }
+
+  function jsonToHTML(jsonDaten) {
+    let html = "<table>";
+    html += "<tr>";
+    for (const key in jsonDaten[0]) {
+      html += `<th>${key}</th>`;
+    }
+  }
+</script>
