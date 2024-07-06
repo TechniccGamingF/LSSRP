@@ -11,20 +11,19 @@
 </html>
 
 <script>
-  function loadMainScreen() {
-    const file = event.target.files[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-    reader.onload = function (event) {
-      const jsonDaten = JSON.parse("data/data.json");
-      console.log(jsonDaten);
-    };
-    reader.readAsText(file);
-
-    document.getElementById("mainScreen").classList.toggle("visible"); // Hinzufügen der CSS-Klasse 'hidden'
-  }
-
+  $(document).ready(function () {
+      const file = event.target.files[0];
+      if (!file) return;
+    
+      const reader = new FileReader();
+      reader.onload = function (event) {
+        const jsonDaten = JSON.parse("data/data.json");
+        console.log(jsonDaten);
+      };
+      reader.readAsText(file);
+    
+      document.getElementById("mainScreen").classList.toggle("visible"); // Hinzufügen der CSS-Klasse 'hidden'
+  });
   function jsonToHTML(jsonDaten) {
     let html = "<table>";
     html += "<tr>";
