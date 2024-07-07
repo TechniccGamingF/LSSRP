@@ -1,23 +1,42 @@
-[
+{
+  "Dealer": [
     {
-        "PLZ": "3013",
-        "Ort": "Paleto",
-        "Menge": "100",
-        "Zeiten": "",
-        "Droge": "Weed, Meth"
+      "PLZ": "3013",
+      "Ort": "",
+      "Menge": "100",
+      "Zeiten": "",
+      "Droge": "Weed, Meth"
     },
     {
-        "PLZ": "1007",
-        "Ort": "awd",
-        "Menge": "10",
-        "Zeiten": "",
-        "Droge": "Weed, Meth"
+      "PLZ": "1007",
+      "Ort": "",
+      "Menge": "10",
+      "Zeiten": "",
+      "Droge": "Weed, Meth"
     },
     {
-        "PLZ": "118",
-        "Ort": "Davis",
-        "Menge": "10",
-        "Zeiten": "",
-        "Droge": "Weed"
+      "PLZ": "118",
+      "Ort": "Davis",
+      "Menge": "10",
+      "Zeiten": "",
+      "Droge": "Weed, Meth"
     }
-]
+  ],
+  "Crafting": [
+    {
+      "first": "1x Eisenerz",
+      "second": "1x Holzbrett",
+      "solution": "1x Dietrich"
+    },
+    {
+      "first": "1x Tip",
+      "second": "1x Longpaper",
+      "solution": "1x Tip mit Longpaper"
+    },
+    {
+    "first": "1x Tip mit Longpaper",
+    "second": "1x abgepacktes Weed",
+    "solution": "1x Joint"
+    }
+  ]
+}
