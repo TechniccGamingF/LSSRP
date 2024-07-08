@@ -2,21 +2,21 @@
   "Dealer": [
     {
       "PLZ": "3013",
-      "Ort": "",
+      "Ort": "Noth Calafia Way",
       "Menge": "100",
       "Zeiten": "",
       "Droge": "Weed, Meth"
     },
     {
       "PLZ": "1007",
-      "Ort": "",
+      "Ort": "Califina Rd",
       "Menge": "10",
-      "Zeiten": "",
+      "Zeiten": "00:00 - 23:00",
       "Droge": "Weed, Meth"
     },
     {
       "PLZ": "118",
-      "Ort": "Davis",
+      "Ort": "Stawberry Ave",
       "Menge": "10",
       "Zeiten": "",
       "Droge": "Weed, Meth"
