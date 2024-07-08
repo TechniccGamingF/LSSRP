@@ -31,75 +31,8 @@
     <table id="crafting-table">
         <thead>
             <tr>
-                <th>First</th>
-                <th>Second</th>
-                <th>Solution</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-    <button class="button" onclick="download()">Download</button>
-    <div id="form-container" style="display: none;">
-        <h2 id="form-title">Add/Edit Entry</h2>
-        <form id="data-form">
-            <label for="plz">PLZ:</label>
-            <input type="text" id="plz" name="plz"><br>
-            <label for="ort">Ort:</label>
-            <input type="text" id="ort" name="ort"><br>
-            <label for="menge">Menge:</label>
-            <input type="text" id="menge" name="menge"><br>
-            <label for="zeiten">Zeiten:</label>
-            <input type="text" id="zeiten" name="zeiten"><br>
-            <label for="droge">Droge:</label>
-            <input type="text" id="droge" name="droge"><br>
-            <input type="hidden" id="row-index">
-            <input type="hidden" id="form-type">
-            <button type="button" class="button" onclick="saveData()">Save</button>
-            <button type="button" class="button" onclick="hideForm()">Cancel</button>
-        </form>
-    </div>
-</body>
-</html>
-
-
-<!-- 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel</title>
-    <script src="../js/admin.js"></script>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body id="body">
-    <h1>Admin Panel</h1>
-    <button onclick="toggleDarkMode()" class="button dark-mode-toggle">🌙</button>
-    <h2>Dealer</h2>
-    <button class="button" onclick="showForm('Dealer')">Add Dealer Entry</button>
-    <table id="dealer-table">
-        <thead>
-            <tr>
-                <th>PLZ</th>
-                <th>Ort</th>
-                <th>Menge</th>
-                <th>Zeiten</th>
-                <th>Droge</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-    <h2>Crafting</h2>
-    <button class="button" onclick="showForm('Crafting')">Add Crafting Entry</button>
-    <table id="crafting-table">
-        <thead>
-            <tr>
-                <th>First</th>
-                <th>Second</th>
+                <th>First ingredients</th>
+                <th>Second ingredients</th>
                 <th>Solution</th>
                 <th>Actions</th>
             </tr>
@@ -124,10 +57,18 @@
                 <input type="text" id="droge" name="droge"><br>
             </div>
             <div id="crafting-fields" style="display: none;">
-                <label for="first">First:</label>
+                <label for="first">First ingredients:</label>
                 <input type="text" id="first" name="first"><br>
-                <label for="second">Second:</label>
+                <label for="second">Second ingredients:</label>
                 <input type="text" id="second" name="second"><br>
                 <label for="solution">Solution:</label>
                 <input type="text" id="solution" name="solution"><br>
-            </div> -->
+            </div>
+            <input type="hidden" id="row-index">
+            <input type="hidden" id="form-type">
+            <button type="button" class="button" onclick="saveData()">Save</button>
+            <button type="button" class="button" onclick="hideForm()">Cancel</button>
+        </form>
+    </div>
+</body>
+</html>
