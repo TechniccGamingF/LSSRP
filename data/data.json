@@ -20,6 +20,12 @@
       "Menge": "10",
       "Zeiten": "",
       "Droge": "Weed, Meth"
+    },    {
+      "PLZ": "310",
+      "Ort": "Bay City Ave",
+      "Menge": "X",
+      "Zeiten": "Immer",
+      "Droge": "X"
     }
   ],
   "Crafting": [

@@ -1,5 +1,4 @@
 function fetchAllDataDealer() {
-    console.log("Fetching data... Dealer");
     fetch("data/data.json")
     .then(response => response.json())
     .then(data => {
@@ -8,7 +7,6 @@ function fetchAllDataDealer() {
 }
 
 function fetchAllDataCrafting() {
-    console.log("Fetching data... Crafting");
     fetch("data/data.json")
     .then(response => response.json())
     .then(data => {
@@ -110,11 +108,11 @@ function toggleContent(id) {
     if (id === 'content') {
         content.style.display = 'block';
         content2.style.display = 'none';
-        document.getElementById("selectAll").click();
+        selectAllDealer();
     } else if (id === 'content2') {
         content.style.display = 'none';
         content2.style.display = 'block';
-        document.getElementById("selectAllCrafting").click();
+        selectAllCrafting();
     }
 }
 
