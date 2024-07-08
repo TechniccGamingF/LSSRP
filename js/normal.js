@@ -1,5 +1,6 @@
 function fetchAllDataDealer() {
-    fetch("../data/data.json")
+    console.log("Fetching data... Dealer");
+    fetch("data/data.json")
     .then(response => response.json())
     .then(data => {
         renderTableDealer(data.Dealer, 'Dealer'); // Render table using only "Dealer" array
@@ -7,7 +8,8 @@ function fetchAllDataDealer() {
 }
 
 function fetchAllDataCrafting() {
-    fetch("../data/data.json")
+    console.log("Fetching data... Crafting");
+    fetch("data/data.json")
     .then(response => response.json())
     .then(data => {
         renderTableCrafting(data.Crafting, 'Crafting'); // Render table using only "Crafting" array
@@ -31,7 +33,7 @@ function selectAllCrafting() {
 }
 
 function fetchDataAndRenderTable(tableName, isNow = null) {
-    fetch("../data/data.json")
+    fetch("data/data.json")
     .then(response => response.json())
     .then(data => {
         if (tableName === 'Crafting') {
