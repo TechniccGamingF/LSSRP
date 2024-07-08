@@ -4,14 +4,14 @@
       "PLZ": "3013",
       "Ort": "Noth Calafia Way",
       "Menge": "100",
-      "Zeiten": "",
+      "Zeiten": "Immer",
       "Droge": "Weed, Meth"
     },
     {
       "PLZ": "1007",
       "Ort": "Califina Rd",
       "Menge": "10",
-      "Zeiten": "00:00 - 23:00",
+      "Zeiten": "",
       "Droge": "Weed, Meth"
     },
     {

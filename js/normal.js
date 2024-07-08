@@ -1,5 +1,5 @@
 function fetchAllDataDealer() {
-    fetch("data/data.json")
+    fetch("../data/data.json")
     .then(response => response.json())
     .then(data => {
         renderTableDealer(data.Dealer, 'Dealer'); // Render table using only "Dealer" array
@@ -7,7 +7,7 @@ function fetchAllDataDealer() {
 }
 
 function fetchAllDataCrafting() {
-    fetch("data/data.json")
+    fetch("../data/data.json")
     .then(response => response.json())
     .then(data => {
         renderTableCrafting(data.Crafting, 'Crafting'); // Render table using only "Crafting" array
@@ -31,7 +31,7 @@ function selectAllCrafting() {
 }
 
 function fetchDataAndRenderTable(tableName, isNow = null) {
-    fetch("data/data.json")
+    fetch("../data/data.json")
     .then(response => response.json())
     .then(data => {
         if (tableName === 'Crafting') {
@@ -44,13 +44,15 @@ function fetchDataAndRenderTable(tableName, isNow = null) {
 
 function renderTableDealer(dataArray, tableName, isNow = null) {
     let htmlAusgabe = "<table id='body table'><tr><th>PLZ</th><th>Ort</th><th>Menge</th><th>Zeiten</th><th>Droge</th></tr>";
-    const currentTime = new Date().getHours() * 60 + new Date().getMinutes(); // current time in minutes
+    const currentTime = new Date().getHours() * 60 + new Date().getMinutes();
 
     dataArray.forEach(item => {
         const { PLZ, Ort, Menge, Zeiten, Droge } = item;
         
         let isNowItem = false;
-        if (Zeiten && !Zeiten === 'Immer') {
+        if (Zeiten && (Zeiten.toLowerCase() === 'immer' || Zeiten.toLowerCase() === 'immer')) {
+            isNowItem = true;
+        } else if (Zeiten && (Zeiten !== 'Immer' || Zeiten !== 'immer')) {
             const [timeStart, timeEnd] = Zeiten.split('-').map(time => {
                 const [hours, minutes] = time.split(':').map(Number);
                 return hours * 60 + minutes;
@@ -58,18 +60,22 @@ function renderTableDealer(dataArray, tableName, isNow = null) {
             isNowItem = currentTime >= timeStart && currentTime <= timeEnd;
         }
 
+        let color = 'black';
         if (isNow === null || isNowItem === isNow) {
-            let color = isNowItem ? 'green' : (Zeiten ? 'red' : 'black');
-            const maxAge = 60 * 60 * 24 * 60; // 60 days in seconds
-            if (Zeiten === 'Immer') {
+            if (Zeiten.toLowerCase() === 'immer' || Zeiten.toLowerCase() === 'immer') {
                 color = 'green';
+            } else if (Zeiten && (Zeiten !== 'Immer' || Zeiten !== 'immer')) {
+                color = 'red';
             }
-            if (document.cookie.includes(`darkmode=true`)) {
-                color = 'white';
+
+            if (document.cookie.includes('darkmode=true')) {
+                color = isNowItem ? 'green' : (Zeiten && Zeiten !== 'Immer' ? 'red' : 'white');
             }
-            htmlAusgabe += `<tr id="${color}"><td>${PLZ}</td><td>${Ort}</td><td>${Menge}</td><td>${Zeiten}</td><td>${Droge}</td></tr>`;
+
+            htmlAusgabe += `<tr style="color:${color};"><td>${PLZ}</td><td>${Ort}</td><td>${Menge}</td><td>${Zeiten}</td><td>${Droge}</td></tr>`;
         }
     });
+
     htmlAusgabe += "</table>";
 
     document.getElementById('content').innerHTML = `
@@ -80,6 +86,7 @@ function renderTableDealer(dataArray, tableName, isNow = null) {
         <br>
         ${htmlAusgabe}`;
 }
+
 function renderTableCrafting(dataArray, tableName) {
     let htmlAusgabe = "<table id='body'><tr><th>Erste Zutat</th><th>Zweite Zutat</th><th>Endprodukt</th></tr>";
 

@@ -8,7 +8,8 @@ body {
 }
 
 table {
-    width: 100%;
+    width: calc(100% - 20px); /* Full width minus the margins */
+    margin: 0 10px; /* 10px margin on left and right */
     border-collapse: collapse;
 }
 
@@ -72,13 +73,13 @@ body.dark-mode .button {
     background-color: #444;
     color: #fff;
     border: 1px solid #555;
-    border-radius: 0px; /* Rounded corners in dark mode */
+    border-radius: 0px; /* No rounding in dark mode */
 }
 
 body.dark-mode .button:hover {
     background-color: #555;
 }
 
-h1.dark-mode{
+h1.dark-mode {
     margin-left: 10px;
 }
