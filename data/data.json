@@ -11,21 +11,21 @@
       "PLZ": "1007",
       "Ort": "Califina Rd",
       "Menge": "10",
-      "Zeiten": "",
+      "Zeiten": "Immer",
       "Droge": "Weed, Meth"
     },
     {
       "PLZ": "118",
       "Ort": "Stawberry Ave",
       "Menge": "10",
-      "Zeiten": "",
+      "Zeiten": "Immer",
       "Droge": "Weed, Meth"
     },    {
       "PLZ": "310",
       "Ort": "Bay City Ave",
-      "Menge": "X",
+      "Menge": "10",
       "Zeiten": "Immer",
-      "Droge": "X"
+      "Droge": "Weed"
     }
   ],
   "Crafting": [

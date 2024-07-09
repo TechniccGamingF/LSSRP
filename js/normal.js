@@ -48,7 +48,7 @@ function renderTableDealer(dataArray, tableName, isNow = null) {
 
     dataArray.forEach(item => {
         const { PLZ, Ort, Menge, Zeiten, Droge } = item;
-        
+
         let isNowItem = false;
         if (Zeiten && (Zeiten.toLowerCase() === 'immer' || Zeiten.toLowerCase() === 'immer')) {
             isNowItem = true;
@@ -60,20 +60,15 @@ function renderTableDealer(dataArray, tableName, isNow = null) {
             isNowItem = currentTime >= timeStart && currentTime <= timeEnd;
         }
 
-        let color = 'black';
-        if (isNow === null || isNowItem === isNow) {
-            if (Zeiten.toLowerCase() === 'immer' || Zeiten.toLowerCase() === 'immer') {
-                color = 'green';
-            } else if (Zeiten && (Zeiten !== 'Immer' || Zeiten !== 'immer')) {
-                color = 'red';
-            }
-
-            if (document.cookie.includes('darkmode=true')) {
-                color = isNowItem ? 'green' : (Zeiten && Zeiten !== 'Immer' ? 'red' : 'white');
-            }
-
-            htmlAusgabe += `<tr style="color:${color};"><td>${PLZ}</td><td>${Ort}</td><td>${Menge}</td><td>${Zeiten}</td><td>${Droge}</td></tr>`;
+        let color = 'white';
+        if (document.cookie.includes('darkmode=true')) {
+            color = isNowItem ? 'green' : (Zeiten && Zeiten !== 'Immer' ? 'red' : 'white');
         }
+        if (!document.cookie) {
+            color = isNowItem ? 'green' : (Zeiten && Zeiten !== 'Immer' ? 'red' : 'black');
+        }
+
+        htmlAusgabe += `<tr style="color:${color};"><td>${PLZ}</td><td>${Ort}</td><td>${Menge}</td><td>${Zeiten}</td><td>${Droge}</td></tr>`;
     });
 
     htmlAusgabe += "</table>";
