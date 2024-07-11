@@ -3,7 +3,7 @@
     {
       "PLZ": "3013",
       "Ort": "Noth Calafia Way",
-      "Menge": "100",
+      "Menge": "10",
       "Zeiten": "Immer",
       "Droge": "Weed, Meth"
     },
@@ -19,13 +19,21 @@
       "Ort": "Stawberry Ave",
       "Menge": "10",
       "Zeiten": "Immer",
-      "Droge": "Weed, Meth"
-    },    {
+      "Droge": "Weed"
+    },
+    {
       "PLZ": "310",
       "Ort": "Bay City Ave",
       "Menge": "10",
       "Zeiten": "Immer",
       "Droge": "Weed"
+    },
+    {
+      "PLZ": "125",
+      "Ort": "Olympic Fwy",
+      "Menge": "10",
+      "Zeiten": "Immer",
+      "Droge": "Weed, Meth"
     }
   ],
   "Crafting": [
@@ -40,9 +48,9 @@
       "solution": "1x Tip mit Longpaper"
     },
     {
-    "first": "1x Tip mit Longpaper",
-    "second": "1x abgepacktes Weed",
-    "solution": "1x Joint"
+      "first": "1x Tip mit Longpaper",
+      "second": "1x abgepacktes Weed",
+      "solution": "1x Joint"
     }
   ]
 }
